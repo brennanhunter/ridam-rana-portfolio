@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
-import { Play, ExternalLink, Github, FileText, Users, Target, TrendingUp, Clock, Award, Zap } from 'lucide-react';
+import { Play, ExternalLink, FileText, Target, TrendingUp, Zap } from 'lucide-react';
 
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState(0);

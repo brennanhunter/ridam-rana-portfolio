@@ -143,7 +143,7 @@ const HeroSection = () => {
             >
               <div className="absolute -left-2 top-4 w-1 h-8 bg-gradient-to-b from-blue-400 to-red-400"></div>
               <blockquote className="text-base md:text-lg text-gray-100 italic font-light">
-                "If you felt something while playing, then I did my job right."
+                &quot;If you felt something while playing, then I did my job right.&quot;
               </blockquote>
               <div className="text-blue-400 text-xs md:text-sm mt-2 font-mono">- Design Philosophy</div>
             </motion.div>

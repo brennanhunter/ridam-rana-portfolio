@@ -385,8 +385,8 @@ const SkillsSection = () => {
               <h3 className="text-xl font-bold text-white">Always Evolving</h3>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6">
-              The game industry doesn't just move fast - it teleports. That's why I never stop learning, 
-              experimenting, and pushing boundaries. Today's cutting-edge becomes tomorrow's baseline, 
+              The game industry doesn&apos;t just move fast - it teleports. That&apos;s why I never stop learning, 
+              experimenting, and pushing boundaries. Today&apos;s cutting-edge becomes tomorrow&apos;s baseline, 
               and I intend to stay ahead of the curve. Currently deep-diving into Unreal Engine because 
               beautiful graphics deserve beautiful systems underneath.
             </p>

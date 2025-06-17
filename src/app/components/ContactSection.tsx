@@ -143,7 +143,7 @@ const ContactSection = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-4xl lg:text-6xl font-bold text-white mb-6"
           >
-            LET'S BUILD
+            LET&apos;S BUILD
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-400">
               SOMETHING EPIC
             </span>
@@ -156,7 +156,7 @@ const ContactSection = () => {
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             Got a game that needs a player advocate? A community that needs a champion? 
-            Or just want to chat about the future of interactive entertainment? I'm all ears.
+            Or just want to chat about the future of interactive entertainment? I&apos;m all ears.
           </motion.p>
         </motion.div>
 
@@ -277,7 +277,7 @@ const ContactSection = () => {
                   </motion.div>
                   <h4 className="text-xl font-bold text-white mb-2">Mission Accomplished!</h4>
                   <p className="text-gray-300">
-                    Your message has been delivered. I'll get back to you faster than a speedrunner clearing level 1-1.
+                    Your message has been delivered. I&apos;ll get back to you faster than a speedrunner clearing level 1-1.
                   </p>
                 </motion.div>
               )}
@@ -372,7 +372,7 @@ const ContactSection = () => {
                 <h4 className="text-white font-semibold">Ready to Level Up?</h4>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                Whether you need a game designer who speaks fluent player, a community manager who turns strangers into superfans, or just someone who gets genuinely excited about making games better - let's chat.
+                Whether you need a game designer who speaks fluent player, a community manager who turns strangers into superfans, or just someone who gets genuinely excited about making games better - let&apos;s chat.
               </p>
               <div className="flex items-center gap-2 text-blue-400 text-sm">
                 <Zap className="w-4 h-4" />

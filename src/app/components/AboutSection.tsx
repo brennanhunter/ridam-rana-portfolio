@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
 import { Users, Gamepad2, FileText, Target, Award, TrendingUp } from 'lucide-react';
 
@@ -167,7 +167,7 @@ const AboutSection = () => {
             variants={itemVariants}
             className="text-4xl lg:text-6xl font-bold text-white mb-6"
           >
-            THE PLAYER'S
+            THE PLAYER&apos;S
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-400">
               ADVOCATE
             </span>
@@ -178,7 +178,7 @@ const AboutSection = () => {
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             From community manager to game designer, I bridge the gap between players and development teams. 
-            I don't just design games—I design experiences that make players feel something.
+            I don&apos;t just design games—I design experiences that make players feel something.
           </motion.p>
         </motion.div>
 
@@ -340,10 +340,10 @@ const AboutSection = () => {
           <div className="bg-gradient-to-r from-slate-800/30 to-slate-700/20 rounded-xl p-8 border border-gray-700/30 max-w-2xl mx-auto">
             <h3 className="text-xl font-bold text-white mb-4">Ready to Create Something Amazing?</h3>
             <p className="text-gray-300 mb-6">
-              Let's build games that make players feel something extraordinary.
+              Let&apos;s build games that make players feel something extraordinary.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-red-600 hover:from-blue-500 hover:to-red-500 text-white font-semibold rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg">
-              Let's Collaborate
+              Let&apos;s Collaborate
             </button>
           </div>
         </motion.div>
