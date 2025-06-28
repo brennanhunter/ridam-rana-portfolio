@@ -396,7 +396,7 @@ const ResumePage = () => {
           <motion.div variants={itemVariants} className="text-center mt-16">
             <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-gray-700/50 backdrop-blur-sm">
               <h3 className="text-2xl font-bold mb-4 text-white">Ready to Create Amazing Games Together?</h3>
-              <p className="text-gray-300 mb-6">Let's discuss how I can contribute to your next project.</p>
+              <p className="text-gray-300 mb-6">Let&apos;s discuss how I can contribute to your next project.</p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="mailto:ridamrana.official@gmail.com"

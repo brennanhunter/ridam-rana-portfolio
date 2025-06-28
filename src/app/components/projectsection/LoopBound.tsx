@@ -48,8 +48,6 @@ interface LoopBoundProps {
 }
 
 const LoopBound: React.FC<LoopBoundProps> = ({ 
-  activeMediaType = 'image', // Force image mode for LoopBound
-  onMediaTypeChange = () => {} 
 }) => {
   return (
     <ProjectCard 

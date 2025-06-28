@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play, ExternalLink, FileText, Target, TrendingUp, Zap, AlertCircle, Download, BookOpen } from 'lucide-react';
+import { Play, ExternalLink, FileText, Target, TrendingUp, Zap, AlertCircle, BookOpen } from 'lucide-react';
 import { ProjectData } from './types';
 import ImageCarousel from './ImageCarousel';
 
@@ -122,7 +122,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                       >
                         <source src={project.media.video} type="video/mp4" />
                         <p className="text-gray-400 p-4">
-                          Your browser doesn't support video playback. 
+                          Your browser doesn&apos;t support video playback. 
                           <a href={project.media.video} className="text-blue-400 hover:underline ml-1">
                             Download the video
                           </a>

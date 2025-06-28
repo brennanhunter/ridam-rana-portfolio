@@ -36,7 +36,7 @@ interface OpenWorldRPGRacingProps {
 }
 
 const OpenWorldRPGRacing: React.FC<OpenWorldRPGRacingProps> = ({ 
-  activeMediaType = 'video', // Default to video
+  
   onMediaTypeChange = () => {} 
 }) => {
   return (
