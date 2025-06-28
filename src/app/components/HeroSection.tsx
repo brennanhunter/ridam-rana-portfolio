@@ -1,34 +1,28 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, ExternalLink, Download, Mail, Linkedin, Youtube } from 'lucide-react';
 
 const HeroSection = () => {
   const [currentProject, setCurrentProject] = useState(0);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   // Sample project data - replace with Ridam's actual content
   const projects = [
     {
       title: "Open World RPG Design",
       description: "From ground up R&R, GDD and open world design",
-      image: "/api/placeholder/800/600",
-      video: "/api/placeholder/video1.mp4",
       type: "System Design"
     },
     {
       title: "Car Parking Driving School",
-      description: "15+ level reworks improving retention rates",
-      image: "/api/placeholder/800/600", 
-      video: "/api/placeholder/video2.mp4",
+      description: "60 level reworks improving retention rates",
       type: "Level Design"
     },
     {
       title: "Mobile Game Events",
       description: "Designed engaging in-game events and systems",
-      image: "/api/placeholder/800/600",
-      video: "/api/placeholder/video3.mp4", 
       type: "Event Design"
     }
   ];
@@ -40,6 +34,24 @@ const HeroSection = () => {
     }, 4000);
     return () => clearInterval(timer);
   }, []);
+
+  // Smooth scroll to projects section
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects-section');
+    if (projectsSection) {
+      const offsetTop = projectsSection.offsetTop - 80; // 80px offset for better positioning
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    } else {
+      // Fallback: scroll by viewport height if element not found
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   // Grid animation background
   const GridBackground = () => (
@@ -94,7 +106,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           
-          {/* Left Column - Personal Brand (always first in DOM) */}
+          {/* Left Column - Personal Brand */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -160,7 +172,7 @@ const HeroSection = () => {
                 <div className="text-gray-400 text-xs md:text-sm">Years Experience</div>
               </div>
               <div className="text-center p-3 md:p-4 bg-slate-800/30 rounded-lg border border-gray-700/50">
-                <div className="text-xl md:text-2xl font-bold text-red-400">15+</div>
+                <div className="text-xl md:text-2xl font-bold text-red-400">60</div>
                 <div className="text-gray-400 text-xs md:text-sm">Levels Reworked</div>
               </div>
             </motion.div>
@@ -172,15 +184,21 @@ const HeroSection = () => {
               transition={{ delay: 1.2 }}
               className="flex flex-wrap gap-3 md:gap-4"
             >
-              <button className="group px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-semibold rounded-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-blue-500/25 text-sm md:text-base">
+              <button 
+                onClick={scrollToProjects}
+                className="group px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-semibold rounded-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-blue-500/25 text-sm md:text-base"
+              >
                 <Play className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform" />
                 View My Work
               </button>
               
-              <button className="px-6 py-3 md:px-8 md:py-4 border-2 border-gray-600 hover:border-red-400 text-gray-300 hover:text-red-400 font-semibold rounded-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2 text-sm md:text-base">
+              <Link
+                href="/resume"
+                className="px-6 py-3 md:px-8 md:py-4 border-2 border-gray-600 hover:border-red-400 text-gray-300 hover:text-red-400 font-semibold rounded-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2 text-sm md:text-base"
+              >
                 <Download className="w-4 h-4 md:w-5 md:h-5" />
-                Download Resume
-              </button>
+                View Resume
+              </Link>
             </motion.div>
 
             {/* Social Links */}
@@ -213,7 +231,7 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Dynamic Project Showcase (appears second on mobile) */}
+          {/* Right Column - Professional Headshot */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -222,63 +240,60 @@ const HeroSection = () => {
           >
             <div className="relative bg-gradient-to-br from-slate-800/40 to-slate-900/40 rounded-xl border border-gray-700/50 backdrop-blur-sm overflow-hidden">
               
-              {/* Project Display */}
-              <div className="aspect-video relative">
+              {/* Headshot Display */}
+              <div className="aspect-square relative">
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-transparent to-red-500/20"></div>
+                
+                <img 
+                  src="/images/Headshot.jpg"
+                  alt="Ridam Rana - Game Designer"
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Professional overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                
+                {/* Floating Status Card */}
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1.5, duration: 0.6 }}
+                  className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg p-3 border border-green-500/30"
+                >
+                  <div className="text-green-400 text-xs font-mono">STATUS</div>
+                  <div className="text-white text-sm font-semibold flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    Available
+                  </div>
+                </motion.div>
+                
+                {/* Floating Location Card */}
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1.7, duration: 0.6 }}
+                  className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30"
+                >
+                  <div className="text-blue-400 text-xs font-mono">LOCATION</div>
+                  <div className="text-white text-sm font-semibold">Mohali, Punjab</div>
+                </motion.div>
+                
+                {/* Featured Project Highlight */}
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentProject}
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.6 }}
-                    className="absolute inset-0"
+                    className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg p-3 border border-purple-500/30 max-w-[200px]"
                   >
-                    {isVideoPlaying ? (
-                      <video 
-                        className="w-full h-full object-cover"
-                        autoPlay
-                        muted
-                        loop
-                        poster={projects[currentProject].image}
-                      >
-                        <source src={projects[currentProject].video} type="video/mp4" />
-                      </video>
-                    ) : (
-                      <img 
-                        src={projects[currentProject].image}
-                        alt={projects[currentProject].title}
-                        className="w-full h-full object-cover"
-                      />
-                    )}
-                    
-                    {/* Play Button Overlay */}
-                    {!isVideoPlaying && (
-                      <motion.button
-                        onClick={() => setIsVideoPlaying(true)}
-                        className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-all duration-300 group"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
-                          <Play className="w-5 h-5 md:w-8 md:h-8 text-white ml-1" fill="currentColor" />
-                        </div>
-                      </motion.button>
-                    )}
+                    <div className="text-purple-400 text-xs font-mono">FEATURED</div>
+                    <div className="text-white text-sm font-semibold truncate">{projects[currentProject].title}</div>
+                    <div className="text-gray-300 text-xs truncate">{projects[currentProject].type}</div>
                   </motion.div>
                 </AnimatePresence>
-                
-                {/* Project Info Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 md:p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="text-white font-semibold text-sm md:text-lg">{projects[currentProject].title}</h3>
-                      <p className="text-gray-300 text-xs md:text-sm">{projects[currentProject].description}</p>
-                    </div>
-                    <span className="px-2 py-1 md:px-3 md:py-1 bg-blue-600/80 text-white text-xs rounded-full">
-                      {projects[currentProject].type}
-                    </span>
-                  </div>
-                </div>
               </div>
               
               {/* Project Navigation */}
@@ -287,13 +302,10 @@ const HeroSection = () => {
                   {projects.map((_, index) => (
                     <button
                       key={index}
-                      onClick={() => {
-                        setCurrentProject(index);
-                        setIsVideoPlaying(false);
-                      }}
+                      onClick={() => setCurrentProject(index)}
                       className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                         index === currentProject 
-                          ? 'bg-blue-400 shadow-lg shadow-blue-400/50' 
+                          ? 'bg-purple-400 shadow-lg shadow-purple-400/50' 
                           : 'bg-gray-600 hover:bg-gray-500'
                       }`}
                     />
@@ -304,6 +316,7 @@ const HeroSection = () => {
 
             {/* Floating Action Button */}
             <motion.button
+              onClick={scrollToProjects}
               className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white rounded-full shadow-lg shadow-red-500/25 flex items-center justify-center transform hover:scale-110 transition-all duration-300"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
@@ -319,12 +332,13 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2, duration: 1 }}
-        className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
+        onClick={scrollToProjects}
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center hover:border-blue-400 transition-colors"
         >
           <motion.div
             animate={{ y: [0, 16, 0] }}
