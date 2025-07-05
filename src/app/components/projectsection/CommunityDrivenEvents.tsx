@@ -2,39 +2,33 @@
 'use client';
 
 import React from 'react';
-import ProjectCard from './ProjectCard';
+import SimpleCommunityCard from './SimpleCommunityCard';
 import { ProjectData } from './types';
 
 const projectData: ProjectData = {
   id: 3,
-  title: "Community-Driven Events",
-  subtitle: "Event Designer & Community Manager",
-  duration: "2022 - 2024", 
-  status: "Multiple Successful Launches",
-  description: "Designed and launched multiple in-game events based on direct player feedback and community insights. Leveraged community management experience to create events that truly resonated with the player base.",
-  challenge: "Needed to create engaging events that felt personalized and community-driven rather than generic top-down designed content.",
-  solution: "Implemented player feedback loops, created community polls for event themes, and designed flexible event systems that could adapt based on real-time player behavior and preferences.",
+  title: "Community Management - CPDS",
+  subtitle: "Community Manager & Content Creator",
+  duration: "Car Parking Driving School", 
+  status: "Active Mobile Game Community",
+  description: "Served as Community Manager for Car Parking Driving School (CPDS), a mobile car simulation game with a highly active player base. Created and managed a specialized playtester program featuring exclusive badges, items, and early access to beta updates through test flights. Successfully maintained community engagement across Discord and social media channels.",
+  challenge: "Build and maintain engagement in a passionate gaming community while creating effective feedback systems that would help developers iterate on features across multiple game versions.",
+  solution: "Established a special tester group from the most active community members, rewarding them with exclusive badges, in-game items, and access to test flights (beta versions). This VIP treatment made testers feel valued while ensuring consistent, high-quality feedback throughout development cycles.",
   impact: [
-    "Achieved 67% average player participation rates in events",
-    "Generated 2.3M+ social media impressions across campaigns",
-    "Built sustainable event templates used across 8 different titles",
-    "Strengthened community-developer relationship with 94% positive feedback"
+    "Created exclusive playtester program with custom badges and premium items",
+    "Implemented test flight system for early access to beta updates",
+    "Managed active Discord community and coordinated social media presence",
+    "Established consistent feedback loops across multiple game versions", 
+    "Developed comprehensive content creation skills (graphic design, illustration, video editing)",
+    "Successfully bridged communication between passionate players and development team"
   ],
-  skills: ["Event Design", "Community Management", "Player Psychology", "Content Creation", "Data Analysis"],
+  skills: ["Community Management", "Discord Administration", "Content Creation", "Graphic Design", "Player Engagement", "Feedback Systems"],
   media: {
-    video: "/videos/community-events.mp4", 
-    images: [
-      "/images/projects/event-participation.jpg",
-      "/images/projects/community-feedback.jpg",
-      "/images/projects/event-timeline.jpg"
-    ],
-    documents: [
-      { name: "Event Design Framework", type: "Process Doc", size: "43 pages" },
-      { name: "Community Feedback Analysis", type: "Research", size: "31 pages" },
-      { name: "Event Success Metrics", type: "Analytics", size: "18 pages" }
-    ]
+    video: "", 
+    images: [],
+    documents: []
   },
-  tags: ["Live Events", "Community", "Mobile", "Viral Content"],
+  tags: ["Community Management", "Mobile Gaming", "Content Creation", "Player Engagement"],
   color: "from-green-600 to-emerald-600"
 };
 
@@ -48,11 +42,7 @@ const CommunityDrivenEvents: React.FC<CommunityDrivenEventsProps> = ({
   onMediaTypeChange = () => {} 
 }) => {
   return (
-    <ProjectCard 
-      project={projectData}
-      activeMediaType={activeMediaType}
-      onMediaTypeChange={onMediaTypeChange}
-    />
+    <SimpleCommunityCard project={projectData} />
   );
 };
 

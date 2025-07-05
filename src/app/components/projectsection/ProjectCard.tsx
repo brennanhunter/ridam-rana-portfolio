@@ -502,7 +502,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Action Buttons */}
         <div className="flex gap-4 pt-4">
-          {project.title === "Open World RPG Racing Sim" ? (
+          {project.title === "Open World RPG Racing Sim" && (
             /* Racing Game - YouTube Demo */
             <a
               href="https://www.youtube.com/watch?v=PLSOyuyv7I8&t=649s"
@@ -513,12 +513,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <Play className="w-4 h-4" />
               Watch Demo
             </a>
-          ) : (
-            /* Other Projects - Generic Action Button */
-            <button className={`flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${project.color} hover:opacity-90 text-white font-semibold rounded-lg transform hover:scale-105 transition-all duration-300`}>
-              <ExternalLink className="w-4 h-4" />
-              View Case Study
-            </button>
           )}
         </div>
       </div>

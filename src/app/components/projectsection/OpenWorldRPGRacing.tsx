@@ -2,7 +2,7 @@
 'use client';
 
 import React from 'react';
-import ProjectCard from './ProjectCard';
+import RacingVideoCard from './RacingVideoCard';
 import { ProjectData } from './types';
 
 const projectData: ProjectData = {
@@ -36,15 +36,11 @@ interface OpenWorldRPGRacingProps {
 }
 
 const OpenWorldRPGRacing: React.FC<OpenWorldRPGRacingProps> = ({ 
-  
+  activeMediaType = 'video', 
   onMediaTypeChange = () => {} 
 }) => {
   return (
-    <ProjectCard 
-      project={projectData}
-      activeMediaType="video" // Force video mode
-      onMediaTypeChange={onMediaTypeChange}
-    />
+    <RacingVideoCard project={projectData} />
   );
 };
 

@@ -2,7 +2,7 @@
 'use client';
 
 import React from 'react';
-import ProjectCard from './ProjectCard';
+import CarParkingCard from './CarParkingCard';
 import { ProjectData } from './types';
 
 const projectData: ProjectData = {
@@ -22,17 +22,9 @@ const projectData: ProjectData = {
   ],
   skills: ["Level Design", "Player Analytics", "Difficulty Balancing", "UI/UX Flow", "Retention Optimization"],
   media: {
-    video: "/videos/car-parking-school.mp4",
-    images: [
-      "/images/projects/parking-level-redesign.jpg",
-      "/images/projects/parking-analytics.jpg",
-      "/images/projects/parking-ui-flow.jpg"
-    ],
-    documents: [
-      { name: "Level Redesign Analysis", type: "Research", size: "28 pages" },
-      { name: "Player Feedback Report", type: "Analytics", size: "15 pages" },
-      { name: "Level Template Guide", type: "Documentation", size: "12 pages" }
-    ]
+    video: "",
+    images: [], // Will be handled by the dedicated component
+    documents: [] // No documents for this project
   },
   tags: ["Mobile", "Simulation", "Educational", "Live Service"],
   color: "from-blue-600 to-cyan-600"
@@ -48,11 +40,7 @@ const CarParkingDrivingSchool: React.FC<CarParkingDrivingSchoolProps> = ({
   onMediaTypeChange = () => {} 
 }) => {
   return (
-    <ProjectCard 
-      project={projectData}
-      activeMediaType={activeMediaType}
-      onMediaTypeChange={onMediaTypeChange}
-    />
+    <CarParkingCard project={projectData} />
   );
 };
 
