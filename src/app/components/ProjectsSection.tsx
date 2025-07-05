@@ -7,6 +7,7 @@ import OpenWorldRPGRacing from './projectsection/OpenWorldRPGRacing';
 import CarParkingDrivingSchool from './projectsection/CarParkingDrivingSchool';
 import CommunityDrivenEvents from './projectsection/CommunityDrivenEvents';
 import LoopBound from './projectsection/LoopBound';
+import ChaosChess from './projectsection/ChaosChess';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -44,6 +45,11 @@ const ProjectsSection = () => {
       name: "LoopBound", 
       shortName: "LoopBound",
       component: LoopBound 
+    },
+    { 
+      name: "Chaos Chess", 
+      shortName: "Chaos Chess",
+      component: ChaosChess 
     },
     { 
       name: "Car Parking Driving School", 
