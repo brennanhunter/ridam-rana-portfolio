@@ -38,8 +38,7 @@ interface CommunityDrivenEventsProps {
 }
 
 const CommunityDrivenEvents: React.FC<CommunityDrivenEventsProps> = ({ 
-  activeMediaType = 'image', 
-  onMediaTypeChange = () => {} 
+
 }) => {
   return (
     <SimpleCommunityCard project={projectData} />

@@ -36,8 +36,7 @@ interface CarParkingDrivingSchoolProps {
 }
 
 const CarParkingDrivingSchool: React.FC<CarParkingDrivingSchoolProps> = ({ 
-  activeMediaType = 'image', 
-  onMediaTypeChange = () => {} 
+
 }) => {
   return (
     <CarParkingCard project={projectData} />

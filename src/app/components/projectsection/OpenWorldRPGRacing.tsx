@@ -36,8 +36,7 @@ interface OpenWorldRPGRacingProps {
 }
 
 const OpenWorldRPGRacing: React.FC<OpenWorldRPGRacingProps> = ({ 
-  activeMediaType = 'video', 
-  onMediaTypeChange = () => {} 
+
 }) => {
   return (
     <RacingVideoCard project={projectData} />
