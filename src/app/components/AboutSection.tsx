@@ -70,8 +70,8 @@ const AboutSection = () => {
     {
       year: "2024-2025",
       title: "World Builder",
-      role: "Lead Game Designer",
-      description: "Leading design on new open-world RPG project. From R&R to GDD, building immersive experiences from the ground up.",
+      role: "Game Designer",
+      description: "Helped design new open-world RPG project. From R&R to GDD, building immersive experiences from the ground up.",
       icon: "🌍"
     }
   ];
