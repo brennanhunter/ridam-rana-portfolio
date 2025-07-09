@@ -502,7 +502,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Action Buttons */}
         <div className="flex gap-4 pt-4">
-          {project.title === "Open World RPG Racing Sim" && (
+          {project.title === "Car Driving Multiplayer" && (
             /* Racing Game - YouTube Demo */
             <a
               href="https://www.youtube.com/watch?v=PLSOyuyv7I8&t=649s"

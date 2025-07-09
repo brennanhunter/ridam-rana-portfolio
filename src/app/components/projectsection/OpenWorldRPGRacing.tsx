@@ -7,8 +7,8 @@ import { ProjectData } from './types';
 
 const projectData: ProjectData = {
   id: 1,
-  title: "Open World RPG Racing Sim",
-  subtitle: "Lead System & World Designer",
+  title: "Car Driving Multiplayer",
+  subtitle: "System & World Designer",
   duration: "2024 - 2025",
   status: "Live & Successful",
   description: "Leading the complete design of a cross-platform RPG-inspired racing simulation from the ground up. Responsible for R&R documentation, comprehensive GDD creation, and open-world design that balances exploration with racing mechanics.",
