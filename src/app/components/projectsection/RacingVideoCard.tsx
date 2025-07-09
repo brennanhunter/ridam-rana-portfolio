@@ -3,7 +3,7 @@
 
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Pause, ExternalLink, Target, TrendingUp, Zap, Download } from 'lucide-react';
+import { Play, Pause, ExternalLink, Target, TrendingUp, Zap} from 'lucide-react';
 import { ProjectData } from './types';
 
 interface RacingVideoCardProps {
