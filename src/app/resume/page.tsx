@@ -159,7 +159,8 @@ const ResumePage = () => {
               RIDAM <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">RANA</span>
             </h1>
             
-            <p className="text-2xl text-gray-300 mb-8">Game Designer</p>
+            <p className="text-2xl text-gray-300 mb-2">Game Designer</p>
+            <p className="text-lg text-gray-400 mb-8">Systems Design | Player Experience | Creative Storytelling</p>
             
             {/* Contact Info */}
             <div className="flex flex-wrap justify-center gap-6 text-gray-400">
@@ -179,12 +180,6 @@ const ResumePage = () => {
                 <Linkedin className="w-4 h-4" />
                 <a href="https://www.linkedin.com/in/ridamrana" className="hover:text-blue-400 transition-colors">
                   LinkedIn
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4" />
-                <a href="https://kolasi.framer.website" className="hover:text-blue-400 transition-colors">
-                  Portfolio
                 </a>
               </div>
             </div>
@@ -234,7 +229,7 @@ const ResumePage = () => {
                     <div className="text-right text-gray-400">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
-                        <span>10/2022 - Present</span>
+                        <span>10/2022 - 04/2025</span>
                       </div>
                       <div className="flex items-center gap-2 mt-1">
                         <MapPin className="w-4 h-4" />
