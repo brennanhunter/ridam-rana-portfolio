@@ -175,7 +175,7 @@ const CarParkingCard: React.FC<CarParkingCardProps> = ({ project }) => {
         {/* Action Button */}
         <div className="flex gap-4 pt-4">
           <a
-             href="https://apps.apple.com/us/app/car-driving-multiplayer/id6479641114"
+             href="https://apps.apple.com/us/app/car-parking-driving-school/id1193550697"
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-gray-800 to-black hover:opacity-90 text-white font-semibold rounded-lg transform hover:scale-105 transition-all duration-300"
@@ -186,7 +186,7 @@ const CarParkingCard: React.FC<CarParkingCardProps> = ({ project }) => {
   Download on App Store
 </a>
   <a
-href="https://play.google.com/store/apps/details?id=com.appsoleut.car.driving.multiplayer"
+href="https://play.google.com/store/apps/details?id=com.racinggames_city.car.racing_Free&hl=en_US&gl=US"
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-gray-800 to-black hover:opacity-90 text-white font-semibold rounded-lg transform hover:scale-105 transition-all duration-300"
