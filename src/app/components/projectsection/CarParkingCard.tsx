@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Target, TrendingUp, Zap } from 'lucide-react';
 import { ProjectData } from './types';
@@ -81,10 +82,11 @@ const CarParkingCard: React.FC<CarParkingCardProps> = ({ project }) => {
                   : 'border-gray-700/30 hover:border-gray-600/50'
               }`}
             >
-              <img 
+              <Image 
                 src={image}
                 alt={`${project.title} - View ${index + 1}`}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </button>
           ))}

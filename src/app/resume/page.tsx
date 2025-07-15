@@ -2,13 +2,13 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { 
   Download, 
   Mail, 
   Phone, 
   MapPin, 
   Linkedin, 
-  Globe, 
   ArrowLeft,
   Star,
   Calendar,
@@ -147,9 +147,11 @@ const ResumePage = () => {
             className="text-center mb-16"
           >
             <div className="relative mb-8">
-              <img
+              <Image
                 src="/images/Headshot.jpg"
                 alt="Ridam Rana"
+                width={128}
+                height={128}
                 className="w-32 h-32 rounded-full mx-auto border-4 border-blue-500/30 shadow-2xl shadow-blue-500/25"
               />
               <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-slate-900 animate-pulse"></div>

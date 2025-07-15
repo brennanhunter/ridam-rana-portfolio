@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, ExternalLink, Download, Mail, Linkedin, Youtube } from 'lucide-react';
 
@@ -33,7 +34,7 @@ const HeroSection = () => {
       setCurrentProject((prev) => (prev + 1) % projects.length);
     }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [projects.length]);
 
   // Smooth scroll to projects section
   const scrollToProjects = () => {
@@ -245,10 +246,11 @@ const HeroSection = () => {
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-transparent to-red-500/20"></div>
                 
-                <img 
+                <Image 
                   src="/images/Headshot.jpg"
                   alt="Ridam Rana - Game Designer"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 
                 {/* Professional overlay */}

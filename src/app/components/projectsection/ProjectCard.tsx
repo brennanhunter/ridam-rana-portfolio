@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Play, ExternalLink, FileText, Target, TrendingUp, Zap, AlertCircle, BookOpen } from 'lucide-react';
 import { ProjectData } from './types';
@@ -215,10 +216,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     )}
                   </div>
                 ) : (
-                  <img 
+                  <Image 
                     src={project.media.images[0]}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 )}
 
@@ -285,10 +287,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 onClick={() => onMediaTypeChange('image')}
                 className="aspect-video bg-slate-800/30 rounded-lg overflow-hidden border border-gray-700/30 hover:border-gray-600/50 transition-all duration-300 group"
               >
-                <img 
+                <Image 
                   src={image}
                   alt={`${project.title} - View ${index + 1}`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </button>
             ))}
