@@ -54,6 +54,18 @@ const HeroSection = () => {
     }
   };
 
+  // Custom Artstation SVG Icon
+  const ArtstationIcon = ({ className }: { className?: string }) => (
+    <svg 
+      viewBox="0 0 24 24" 
+      fill="currentColor" 
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 17.723l2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24 .025c0-.484-.143-.935-.388-1.314L15.728 2.728a2.424 2.424 0 0 0-2.142-1.289H9.419L21.598 22.54l1.92-3.325c.378-.656.482-1.464.482-1.467zm-11.129-3.462L7.428 4.858l-5.444 9.428h10.887z"/>
+    </svg>
+  );
+
   // Grid animation background
   const GridBackground = () => (
     <div className="absolute inset-0 overflow-hidden">
@@ -214,6 +226,9 @@ const HeroSection = () => {
               </a>
               <a href="https://www.linkedin.com/in/ridamrana/" className="p-2 md:p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg border border-gray-600/50 hover:border-blue-400/50 transition-all duration-300 group">
                 <Linkedin className="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-blue-400" />
+              </a>
+              <a href="https://www.artstation.com/youmadbroyolo3" className="p-2 md:p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg border border-gray-600/50 hover:border-purple-400/50 transition-all duration-300 group">
+                <ArtstationIcon className="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-purple-400" />
               </a>
               <a href="https://www.youtube.com/@kolasi3561" className="p-2 md:p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg border border-gray-600/50 hover:border-red-400/50 transition-all duration-300 group">
                 <Youtube className="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-red-400" />
