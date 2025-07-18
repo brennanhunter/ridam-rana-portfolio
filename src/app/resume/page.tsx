@@ -10,7 +10,6 @@ import {
   MapPin, 
   Linkedin, 
   ArrowLeft,
-  Star,
   Calendar,
   Briefcase,
   GraduationCap,
@@ -19,39 +18,85 @@ import {
   Gamepad2,
   Zap,
   Wrench,
-  Video
+  Video,
+  Globe,
+  Star,
+  Trophy,
+  Users
 } from 'lucide-react';
 import Link from 'next/link';
-
-// Animation variants for staggered children (used in motion.div)
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-};
 
 const ResumePage = () => {
 
   const skills = [
-    "Gameplay Loops", "Flow", "3Cs", "Level Design", "Gameplay Design", 
-    "Level Blockout", "Unreal", "Unity", "MS Office", "Figma", 
-    "Photoshop", "Jira", "Sourcetree"
+    "Unity", "Unreal Engine", "Blender", "Figma", "Photoshop", "Jira",
+    "Systems Design", "Level Design", "World Building", "Narrative Design", "Economic Design",
+    "Gameplay Loops", "Player Flow", "3Cs", "Difficulty Balancing", "Player Analytics",
+    "Community Management", "Content Creation", "GDD Documentation", "Playtesting"
   ];
 
   const strengths = [
     {
-      title: "Creative Thinking",
-      description: "Always exploring fresh, fun ideas that stand out.",
-      icon: <Star className="w-5 h-5" />
+      title: "Player-Centric Design",
+      description: "Data-driven approach to creating engaging player experiences with proven retention improvements.",
+      icon: <Users className="w-5 h-5" />
     },
     {
-      title: "Game Systems",
-      description: "Strong understanding of how mechanics work and connect.",
-      icon: <Gamepad2 className="w-5 h-5" />
-    },
-    {
-      title: "Collaboration", 
-      description: "Work smoothly with artists, devs, and other designers.",
+      title: "Community Building",
+      description: "Proven results growing communities to 100K+ followers across multiple platforms with engaging content.",
       icon: <Heart className="w-5 h-5" />
+    },
+    {
+      title: "Technical Implementation", 
+      description: "Multi-engine expertise with comprehensive game development pipeline from concept to launch.",
+      icon: <Zap className="w-5 h-5" />
+    },
+    {
+      title: "Content Creation",
+      description: "Full pipeline content creation including graphics, videos, and interactive multimedia experiences.",
+      icon: <Video className="w-5 h-5" />
+    }
+  ];
+
+  const professionalProjects = [
+    {
+      title: "Car Driving Multiplayer (Open World RPG Racing Sim)",
+      role: "System & World Designer",
+      period: "2024 - 2025",
+      description: "Cross-platform RPG racing simulation responsible for R&R documentation, GDD creation, and open-world design balancing exploration with racing mechanics.",
+      achievements: [
+        "Created scalable mission templates for future content expansion",
+        "Designed cinematic camera systems enhancing gameplay experience", 
+        "Developed economic progression systems balancing player engagement",
+        "Successfully launched on App Store with positive reception"
+      ]
+    }
+  ];
+
+  const featuredProjects = [
+    {
+      title: "LoopBound (Survival Horror)",
+      role: "Game Designer & Creative Director",
+      period: "2024 - Present",
+      description: "First-person survival extraction shooter with PS1-inspired horror aesthetics. Complete design ownership from concept through comprehensive documentation.",
+      achievements: [
+        "Created comprehensive world with 5 distinct biomes and rich lore system",
+        "Designed complex survival mechanics balancing realism with supernatural elements",
+        "Developed complete GDD with 50+ pages of detailed documentation",
+        "Pioneered innovative use of retro aesthetics for modern horror design"
+      ]
+    },
+    {
+      title: "Chaos Chess",
+      role: "Game Designer & Systems Developer", 
+      period: "2024 - Present",
+      description: "Strategic chess variant with random card-based effects. Complete ruleset creation with comprehensive balance testing.",
+      achievements: [
+        "Designed 50+ balanced cards with varying strategic impact levels",
+        "Created alternative win condition mechanics maintaining chess essence",
+        "Developed two-phase turn system combining strategy with controlled chaos",
+        "Established complete ruleset with comprehensive card database"
+      ]
     }
   ];
 
@@ -137,7 +182,7 @@ const ResumePage = () => {
             staggerChildren: 0.1,
             delayChildren: 0.2
           }}
-          className="max-w-4xl mx-auto"
+          className="max-w-6xl mx-auto"
         >
           {/* Header Section */}
           <motion.div 
@@ -161,8 +206,7 @@ const ResumePage = () => {
               RIDAM <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">RANA</span>
             </h1>
             
-            <p className="text-2xl text-gray-300 mb-2">Game Designer</p>
-            <p className="text-lg text-gray-400 mb-8">Systems Design | Player Experience | Creative Storytelling</p>
+            <p className="text-2xl text-gray-300 mb-8">Game Designer</p>
             
             {/* Contact Info */}
             <div className="flex flex-wrap justify-center gap-6 text-gray-400">
@@ -184,6 +228,12 @@ const ResumePage = () => {
                   LinkedIn
                 </a>
               </div>
+              <div className="flex items-center gap-2">
+                <Globe className="w-4 h-4" />
+                <a href="https://ridam-rana-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+                  Portfolio
+                </a>
+              </div>
             </div>
           </motion.div>
 
@@ -195,77 +245,218 @@ const ResumePage = () => {
             className="mb-16"
           >
             <h2 className="text-3xl font-bold mb-6 text-center">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Summary</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Professional Summary</span>
             </h2>
             <div className="bg-slate-800/50 rounded-xl p-8 border border-gray-700/50 backdrop-blur-sm">
               <p className="text-lg text-gray-300 leading-relaxed text-center">
-                Creative and dedicated game designer with a strong foundation in systems design, worldbuilding, and rapid prototyping. 
-                Skilled at crafting engaging, player-first experiences backed by a deep understanding of game mechanics and design principles. 
-                Continuously evolving with new tools and ideas, and eager to contribute to innovative projects that push the boundaries of 
-                interactive storytelling and gameplay.
+                <span className="text-blue-400 font-semibold">Versatile Game Designer</span> with <span className="text-blue-400 font-semibold">2+ years of professional experience</span> creating engaging player experiences across multiple shipped titles. Proven ability to improve player retention through <span className="text-blue-400 font-semibold">data-driven design decisions</span> and successful <span className="text-blue-400 font-semibold">community management</span>. Strong technical skills in Unity, Unreal Engine, and comprehensive game development pipeline from concept to launch.
               </p>
             </div>
           </motion.div>
 
+          {/* Professional Projects Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
+              <Trophy className="w-8 h-8 text-green-400" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Professional Projects</span>
+            </h2>
+            
+            <div className="space-y-6">
+              {professionalProjects.map((project, index) => (
+                <div key={index} className="bg-gradient-to-r from-green-900/20 to-green-800/20 rounded-xl p-8 border border-green-700/30 backdrop-blur-sm">
+                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                    <div>
+                      <h3 className="text-2xl font-bold text-green-100 mb-2">{project.title}</h3>
+                      <p className="text-lg text-green-400 font-semibold">{project.role}</p>
+                    </div>
+                    <div className="text-gray-400 mt-2 lg:mt-0">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{project.period}</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
+                  
+                  <ul className="space-y-3">
+                    {project.achievements.map((achievement, i) => (
+                      <li key={i} className="flex items-start gap-3 text-gray-300">
+                        <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span>{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Featured Projects Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
+              <Star className="w-8 h-8 text-purple-400" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Featured Projects</span>
+            </h2>
+            
+            <div className="grid lg:grid-cols-2 gap-6">
+              {featuredProjects.map((project, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:bg-slate-700/50 transition-colors">
+                  <div className="flex flex-col justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                      <p className="text-blue-400 font-semibold">{project.role}</p>
+                    </div>
+                    <div className="text-gray-400 text-sm mt-2">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{project.period}</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
+                  
+                  <ul className="space-y-2">
+                    {project.achievements.map((achievement, i) => (
+                      <li key={i} className="flex items-start gap-2 text-gray-300 text-sm">
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
+                        <span>{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* Two Column Layout */}
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-3 gap-12 mb-16">
             {/* Left Column */}
             <div className="lg:col-span-2 space-y-12">
               {/* Experience Section */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
               >
                 <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
                   <Briefcase className="w-8 h-8 text-blue-400" />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Experience</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Professional Experience</span>
                 </h2>
                 
-                <div className="bg-slate-800/50 rounded-xl p-8 border border-gray-700/50 backdrop-blur-sm">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-white">Game Designer</h3>
-                      <p className="text-xl text-blue-400 font-semibold">Appsoleut Games</p>
-                    </div>
-                    <div className="text-right text-gray-400">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>10/2022 - 04/2025</span>
+                <div className="space-y-8">
+                  {/* Game Designer */}
+                  <div className="bg-slate-800/50 rounded-xl p-8 border border-gray-700/50 backdrop-blur-sm">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">Game Designer</h3>
+                        <p className="text-xl text-blue-400 font-semibold">Appsoleut Games</p>
                       </div>
-                      <div className="flex items-center gap-2 mt-1">
-                        <MapPin className="w-4 h-4" />
-                        <span>Gurgaon, India</span>
+                      <div className="text-right text-gray-400">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>October 2022 - Present</span>
+                        </div>
+                        <div className="flex items-center gap-2 mt-1">
+                          <MapPin className="w-4 h-4" />
+                          <span>Gurgaon, India</span>
+                        </div>
                       </div>
                     </div>
+                    
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Designed engaging game mechanics, environments, and feature concepts</strong> across multiple projects including Car Parking Driving School and Car Driving Multiplayer</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Contributed to Car Driving Multiplayer development</strong> - Cross-platform RPG-inspired racing simulation with open-world design</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Developed narrative elements, lore, and character/world backstories</strong> to enhance player immersion and engagement</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Built camera systems for vehicles and player characters</strong> with cinematic gameplay feel enhancing user experience</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Worked closely with 3D artists and UI/UX designers</strong> to bring ideas from sketches to fully playable systems</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Created clear design documentation and visual references</strong> to align teams on gameplay vision and project goals</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Contributed to live game feedback and iteration cycles</strong> to improve player experience and retention</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Improved player retention by 34%</strong> through data-driven level design and difficulty balancing</span>
+                      </li>
+                    </ul>
                   </div>
-                  
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Designed engaging game mechanics, environments, and feature concepts across multiple projects.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Developed narrative elements, lore, and character/world backstories to enhance immersion.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Built camera systems for vehicles and player characters with a cinematic gameplay feel.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Worked closely with 3D artists and UI/UX designers to bring ideas from sketches to fully playable systems.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Created clear design documentation and visual references to align teams on gameplay vision.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Contributed to live game feedback and iteration cycles to improve player experience.</span>
-                    </li>
-                  </ul>
+
+                  {/* Community Manager */}
+                  <div className="bg-slate-800/50 rounded-xl p-8 border border-gray-700/50 backdrop-blur-sm">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">Community Manager</h3>
+                        <p className="text-xl text-purple-400 font-semibold">Car Parking Driving School (CPDS)</p>
+                      </div>
+                      <div className="text-right text-gray-400">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>2023</span>
+                        </div>
+                        <div className="flex items-center gap-2 mt-1">
+                          <MapPin className="w-4 h-4" />
+                          <span>Mobile Game Community</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Managed multi-platform digital presence</strong> across Instagram, TikTok, Discord, and YouTube channels</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Grew Instagram community to 100K followers</strong> through strategic content planning and consistent engagement</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Scaled YouTube channel to 100K subscribers</strong> creating viral short-form content with high engagement rates</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Developed diverse content strategy</strong> combining informative tutorials with entertaining gameplay highlights</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Created exclusive playtester program</strong> with custom badges and early access privileges</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Produced high-quality multimedia content</strong> including graphics, videos, and interactive posts</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </motion.div>
 
@@ -283,8 +474,9 @@ const ResumePage = () => {
                 <div className="bg-slate-800/50 rounded-xl p-8 border border-gray-700/50 backdrop-blur-sm">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-white">Bachelor of Science in Art and Game Design</h3>
-                      <p className="text-xl text-purple-400 font-semibold">Chandigarh University</p>
+                      <h3 className="text-2xl font-bold text-white">Bachelor of Science</h3>
+                      <p className="text-xl text-purple-400 font-semibold">Art and Game Design</p>
+                      <p className="text-lg text-purple-400">Chandigarh University</p>
                     </div>
                     <div className="text-right text-gray-400">
                       <div className="flex items-center gap-2">
@@ -295,7 +487,7 @@ const ResumePage = () => {
                   </div>
                   
                   <p className="text-gray-300">
-                    Specialized in core game design principles with a focus on 2D art and animation.
+                    Specialized in core game design principles with focus on 2D art and animation
                   </p>
                 </div>
               </motion.div>
@@ -310,7 +502,7 @@ const ResumePage = () => {
                 transition={{ duration: 0.6, delay: 1.0 }}
               >
                 <h2 className="text-2xl font-bold mb-6 text-center">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Skills</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Technical Skills</span>
                 </h2>
                 
                 <div className="bg-slate-800/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm">
@@ -331,7 +523,7 @@ const ResumePage = () => {
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.2 }}
+                transition={{ duration: 0.6, delay: 1.1 }}
               >
                 <h2 className="text-2xl font-bold mb-6 text-center">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Languages</span>
@@ -349,10 +541,14 @@ const ResumePage = () => {
                 </div>
               </motion.div>
 
-              {/* Strengths Section */}
-              <motion.div variants={itemVariants}>
+              {/* Core Strengths Section */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.2 }}
+              >
                 <h2 className="text-2xl font-bold mb-6 text-center">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Strengths</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Core Strengths</span>
                 </h2>
                 
                 <div className="space-y-4">
@@ -371,7 +567,12 @@ const ResumePage = () => {
           </div>
 
           {/* Hobbies Section */}
-          <motion.div variants={itemVariants} className="mt-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.3 }}
+            className="mb-16"
+          >
             <h2 className="text-3xl font-bold mb-8 text-center">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-400">Hobbies</span>
             </h2>
@@ -390,7 +591,12 @@ const ResumePage = () => {
           </motion.div>
 
           {/* Bottom CTA */}
-          <motion.div variants={itemVariants} className="text-center mt-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+            className="text-center"
+          >
             <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-gray-700/50 backdrop-blur-sm">
               <h3 className="text-2xl font-bold mb-4 text-white">Ready to Create Amazing Games Together?</h3>
               <p className="text-gray-300 mb-6">Let&apos;s discuss how I can contribute to your next project.</p>
