@@ -287,11 +287,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 onClick={() => onMediaTypeChange('image')}
                 className="aspect-video bg-slate-800/30 rounded-lg overflow-hidden border border-gray-700/30 hover:border-gray-600/50 transition-all duration-300 group"
               >
-                <Image 
+                <img 
                   src={image}
                   alt={`${project.title} - View ${index + 1}`}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </button>
             ))}
@@ -306,7 +305,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 href="/images/LoopGDD.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group cursor-pointer bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-xl p-6 border border-red-700/30 hover:border-red-600/50 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10"
+                className="block group cursor-pointer bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-xl p-6 border border-red-600/50 hover:border-red-500/70 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
@@ -337,7 +336,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   href="/images/ChaosGDD.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group cursor-pointer bg-gradient-to-r from-amber-900/20 to-yellow-900/20 rounded-xl p-6 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10"
+                  className="block group cursor-pointer bg-gradient-to-r from-amber-900/20 to-yellow-900/20 rounded-xl p-6 border border-amber-600/50 hover:border-amber-500/70 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
@@ -366,7 +365,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   href="/images/ChaosCard.pdf"
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group cursor-pointer bg-gradient-to-r from-amber-900/20 to-yellow-900/20 rounded-xl p-6 border border-amber-700/30 hover:border-amber-600/50 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10"
+                  className="block group cursor-pointer bg-gradient-to-r from-amber-900/20 to-yellow-900/20 rounded-xl p-6 border border-amber-600/50 hover:border-amber-500/70 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
